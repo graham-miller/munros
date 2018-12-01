@@ -1,0 +1,50 @@
+/* Reset */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+    { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+    { display: block; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+
+/* Style */
+
+html, body { height: 100%; }
+
+div#map {
+    height: 100%;
+    width: 100%;
+}
+
+.popup-title {
+    font-weight: bold;
+}
+
+.popup-region, .popup-meaning {
+    color: #888;
+}
+
+.mapbox-wordmark {
+    height: 20px;
+    width: 65px;
+    text-indent: -9999px;
+    background-image:    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 65px 20px;
+}
+
+.munro-icon {
+    background-color: #f8d7da;
+    border: 1px solid #721c24;
+    height: 15px !important;
+    width: 15px !important;
+    border-radius: 8px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+.munro-icon.climbed {
+    background-color: #d4edda;
+   border: 1px solid #155724;
+}
