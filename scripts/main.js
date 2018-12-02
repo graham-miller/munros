@@ -109,17 +109,11 @@ function addMapboxLogoTo(map) {
 }
 
 function addCustomAttributionTo(map) {
-/*
-<div class="mapbox-attribution-container">
-    &ensp;<a href="https://www.mapbox.com/about/maps/">&copy; Mapbox</a>&ensp;&middot;&ensp;
-    <a href="http://www.openstreetmap.org/copyright">&copy; OpenStreetMap</a>&ensp;&middot;&ensp;
-    <a href="https://www.mapbox.com/map-feedback/" target="_blank"><strong>Improve this map</strong></a>&ensp;
-</div>
-*/
+
     L.Control.OsmAttribution = L.Control.extend({
         onAdd: function() {
             
-            var wrapper = L.DomUtil.create('div', 'my-attribute-wrapper leaflet-control-layers');
+            var wrapper = L.DomUtil.create('div', 'mapbox-attribution leaflet-control-layers');
 
             var link1 = L.DomUtil.create('a', '', wrapper);
             link1.href = 'https://www.mapbox.com/about/maps/';
@@ -127,7 +121,7 @@ function addCustomAttributionTo(map) {
             link1.innerText = '© Mapbox';
 
             var spacer1 = L.DomUtil.create('span', '', wrapper);
-            spacer1.innerText = '·';
+            spacer1.innerText = ' · ';
 
             var link2 = L.DomUtil.create('a', '', wrapper);
             link2.href = 'http://www.openstreetmap.org/copyright';
@@ -135,7 +129,7 @@ function addCustomAttributionTo(map) {
             link2.innerText = '© OpenStreetMap';
 
            var spacer2 = L.DomUtil.create('span', '', wrapper);
-            spacer2.innerText = '·';
+            spacer2.innerText = ' · ';
 
             var link3 = L.DomUtil.create('a', '', wrapper);
             link3.href = 'https://www.mapbox.com/map-feedback/';

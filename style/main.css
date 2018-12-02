@@ -37,6 +37,11 @@ div#map {
     background-size: 65px 20px;
 }
 
+.mapbox-attribution {
+    font-size: 0.8em;
+    padding: 0 0.5em 0 0.5em;
+}
+
 .munro-icon {
     background-color: #f8d7da;
     border: 1px solid #721c24;
