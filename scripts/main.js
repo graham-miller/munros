@@ -24,10 +24,10 @@ function bootstrap() {
 function addBaseLayersAndOverlaysTo(map) {
 
     var mapBoxTileLayers = getMapBoxTileLayers();
-    //map.addLayer(mapBoxTileLayers.outdoors);
+    map.addLayer(mapBoxTileLayers.outdoors);
 
     var regionLayerGroups = getRegionLayerGroups();
-    //regionLayerGroups.forEach(x => { x.addTo(map); });
+    regionLayerGroups.forEach(x => { x.addTo(map); });
 
     var baseLayers = {
         'Outdoors': mapBoxTileLayers.outdoors,

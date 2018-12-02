@@ -11,15 +11,15 @@ namespace Jsonify
     {
         private static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
         {
-            Formatting = Newtonsoft.Json.Formatting.Indented,
+            Formatting = Formatting.Indented,
             ContractResolver = new CamelCasePropertyNamesContractResolver()
         };
 
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             List<CsvRecord> records;
 
-            using (var stream = new FileStream(@"C:\Users\gmiller\Desktop\Munros.csv", FileMode.Open))
+            using (var stream = new FileStream(@"C:\Users\Graham\Github\munros\data\munros.csv", FileMode.Open))
             using (TextReader textReader = new StreamReader(stream))
             using (var csv = new CsvReader(textReader))
             {
@@ -37,13 +37,13 @@ namespace Jsonify
                         .Where(y => y.RegionNumber == x.RegionNumber)
                         .Select(y => new
                         {
-                            Rank = y.Rank,
-                            Name = y.Name,
-                            Meaning = y.Meaning,
-                            Height = y.Height,
-                            Latitude = y.Latitude,
-                            Longitude = y.Longitude,
-                            Climbed = y.Climbed
+                            y.Rank,
+                            y.Name,
+                            y.Meaning,
+                            y.Height,
+                            y.Latitude,
+                            y.Longitude,
+                            y.Climbed
                         })
                         .OrderByDescending(y => y.Height)
                         .ToList()
@@ -55,7 +55,7 @@ namespace Jsonify
 
             var json = JsonConvert.SerializeObject(regions, Settings);
 
-            File.WriteAllText(@"C:\Users\gmiller\Desktop\Munros.json", json);
+            File.WriteAllText(@"C:\Users\Graham\Github\munros\scripts\munros.json", json);
         }
     }
 
